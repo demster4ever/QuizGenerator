@@ -50,8 +50,8 @@ $(document).ready(function(){
 			
 			$("#"+id+i).append(div_element_grand_child);
 			grandChildElement = document.getElementById(id+id+i);
-			grandChildElement.addEventListener("dragstart", startDrag,false);
-			grandChildElement.addEventListener("dragenter",function(e){e.preventDefault()},false);
+		
+			grandChildElement.addEventListener("dragstart",function(e){e.preventDefault()},false);
 			grandChildElement.addEventListener("dragover",function(e){e.preventDefault()},false);
 			grandChildElement.addEventListener("drop",dropped,false);
 		}
@@ -91,27 +91,23 @@ $(document).ready(function(){
 
 	function startDrag(e){
 		var sample = '';
-		if(e.target.id==="insertText" || e.target.id==="textitem" ){
-			sample = '<a href="#!" id="textitem" class="btn">Text Here</a>';
+		if(e.target.id==="insertText" ){
+			sample = '<input type="text" id="textitem" class="input-field" placeholder="Insert Text"/>';
 		}
-		if(e.target.id==="insertImage" || e.target.id==="imgitem" ){
-			sample = '<a href="#!" id="imgitem" class="btn">Image Here</a>';
+		if(e.target.id==="insertImage" ){
+			sample = '<a href="#!" id="imgitem" class="btn">Image Here</a>';//call an upload image function here
 		}
-		if(e.target.id==="insertAudio" || e.target.id==="auditem"){
-			sample = '<a href="#!" id="auditem" class="btn">Audio Here</a>';
+		if(e.target.id==="insertAudio"){
+			sample = '<a href="#!" id="auditem" class="btn">Audio Here</a>';//call an upload audio function here
 		}
-		if(e.target.id==="insertVideo" || e.target.id==="viditem"){
-			sample = '<a href="#!" id="viditem" class="btn">Video Here</a>';
+		if(e.target.id==="insertVideo"){
+			sample = '<a href="#!" id="viditem" class="btn">Video Here</a>';//call an upload video function here
 		}
 		e.dataTransfer.setData("Text", sample);
 	}
 
 	function dropped(e){
 		e.preventDefault();
-		var temp = e.dataTransfer.getData("Text");
-		e.target.clear();
-		e.currentTarget.innerHTML = temp;
-		temp = '';
-		//alert(e.dataTransfer.getData("Text"));
+		e.currentTarget.innerHTML = e.dataTransfer.getData("Text");
 	}
 });
