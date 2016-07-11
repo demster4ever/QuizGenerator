@@ -1,0 +1,4 @@
+category selection-> redirect
+call function for creating dynamic initial elements -> 
+assigning elements with corresponding functions (draggable & droppable) ->
+clicking next

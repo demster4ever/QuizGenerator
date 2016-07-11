@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Drag and Drop</title>
+        <meta name="description" content="An interactive getting started guide for Brackets.">
+        <link rel="stylesheet" href="js/materialize/css/materialize.css">
+        <!-- <link rel="stylesheet" href="css/main-style.css"> -->
+        <script type="text/javascript" src="js/jquery-3.0.0.js"></script>
+        <script type="text/javascript" src="js/materialize/js/materialize.min.js"></script>
+        <!-- <script type="text/javascript" src="js/jqueryui/jquery-ui.js"></script>-->
+        <script type="text/javascript" src="js/script-for-jqueryui.js"></script> 
+    </head>
+    <body>
+    	<div class="" style="margin: 0 5%;">
+            <div class="">
+                <div class="title-panel"><h3>Quiz Generator</h3></div>
+                <div class="instructions-panel">    
+                        <div class="instruction main"><h5>Choose Type of Quiz</h5></div>
+                        <div class="instruction sub">
+                            <p>
+                                Select type of quiz from the list below by clicking appopriate button.
+                            </p>
+                        </div>
+                </div>
+
+                <div class="content-selection ">    
+                        <div class="card-panel row center" style="padding: 20px;">
+                            <a href="#modal1" class="modal-trigger waves-effect waves-light btn-large col s6">Matching Type</a>
+                            <a href="#modal2" class="modal-trigger waves-effect waves-light btn-large col s6">Fill in the Blanks</a>
+                        </div>
+                </div>
+            </div> 
+    			
+    	</div>
+
+    	<div id="modal1" class="modal modal-fixed-footer">
+            <div class="modal-content">
+                <h4 class="card-title">Matching Type</h4>
+                <p class="">Choose Level of Difficulty</p>
+                <div>
+                    <ul>
+                        <li><a href="pages/create_match.php?bid=hello" class="waves-effect waves-light btn-large">Beginners</a></li>
+                        <li><a href="#!" class="waves-effect waves-light btn-large">Intermediate</a></li>
+                        <li><a href="#!" class="waves-effect waves-light btn-large">Advance</a></li>
+                    </ul>
+                </div>
+
+            </div> 
+        </div>
+
+        <div id="modal2" class="modal modal-fixed-footer">
+            <div class="modal-content">
+                <h4 class="card-title">Fill in the Blanks</h4>
+                <p>Choose Level of Difficulty</p>
+               
+            </div> 
+        </div>
+
+    </body>
+</html>
+
